@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/structs2_study.iml" filepath="$PROJECT_DIR$/structs2_study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/struts2_demon/struts2_demon.iml" filepath="$PROJECT_DIR$/struts2_demon/struts2_demon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/struts2_impl/struts2_impl.iml" filepath="$PROJECT_DIR$/struts2_impl/struts2_impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/struts_action_context/struts_action_context.iml" filepath="$PROJECT_DIR$/struts_action_context/struts_action_context.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+    <!--
+     package:包,struts-default 这个包在struts-default.xml文件中定义的,里面定义了一堆通用的过滤器
+     ，和返回结果。
+        name:必填属性，用于其他包引用当前包
+        extends:当前包继承哪个包，可以继承其中所有的配置，通常都继承struts-default
+        namespace 属性是可选的 类似于我们在springmvc中在controller类的类名上加了@requestMapping注解
+        ，该属性默认值为‘/’，所以我们在jsp的a标签中虽然写的是action="save.action" 但我们浏览器访问时依然要写
+        为：/save.action
+     -->
+    <package name="default"  extends="struts-default">
+        <!--
+        action:
+            配置一个action: 一个struts2请求就是一个action
+            name:对应一个struts2请求的名字（或者对应一个servletPath,但去除‘/’和拓展名），不包含拓展名
+            ：就例如在jsp的a标签中虽然写的是action="save.action" 那么我们在<action>标签中的name属性就写为save
+            class:应写为我们自己定义的action类 默认值为：com.opensymphony.xwork2.ActionSupport
+            method:我们定义的action类中在在本次请求中要执行的方法 默认值为execute
+        -->
+        <!--
+            result:结果，表示action方法执行后可能返回的一个结果，所以一个action可能对应多个result节点
+            即可以根据返回值返回到不同的页面。返回到不同页面的依据是result标签的name属性
+            name:标识result节点
+            type:表示结果的类型，默认值为dispatcher(将请求转发到当前result对应的页面)
+            -->
+        <action name="input" class="com.opensymphony.xwork2.ActionSupport">
+            <result>/WEB-INF/view/input.jsp</result>
+        </action>
+<!--        <action name="save" class="po.People" method="save">-->
+<!--            <result name="people">/WEB-INF/view/input.jsp</result>-->
+<!--        </action>-->
+
+    </package>
+
+
+
+</struts>
